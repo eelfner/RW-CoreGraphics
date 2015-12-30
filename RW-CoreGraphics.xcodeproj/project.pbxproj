@@ -85,13 +85,10 @@
 		B60B86131C3406240012017D /* RW-CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				B60B86141C3406240012017D /* AppDelegate.swift */,
 				B60B86161C3406240012017D /* ViewController.swift */,
 				B60B86181C3406240012017D /* Main.storyboard */,
-				B60B861B1C3406240012017D /* Assets.xcassets */,
-				B60B861D1C3406240012017D /* LaunchScreen.storyboard */,
-				B60B86201C3406240012017D /* Info.plist */,
 				B60B86391C3406DD0012017D /* PushButtonView.swift */,
+				B60B86451C3424310012017D /* App */,
 			);
 			path = "RW-CoreGraphics";
 			sourceTree = "<group>";
@@ -99,12 +96,10 @@
 		B60B862B1C3406790012017D /* RW-CoreGraphicsMac */ = {
 			isa = PBXGroup;
 			children = (
-				B60B862C1C3406790012017D /* AppDelegate.swift */,
 				B60B862E1C3406790012017D /* ViewController.swift */,
-				B60B86301C3406790012017D /* Assets.xcassets */,
 				B60B86321C3406790012017D /* Main.storyboard */,
-				B60B86351C3406790012017D /* Info.plist */,
 				B60B863B1C3412150012017D /* PushButtonNSView.swift */,
+				B60B86461C3424480012017D /* App */,
 			);
 			path = "RW-CoreGraphicsMac";
 			sourceTree = "<group>";
@@ -123,6 +118,27 @@
 				B60B86411C3418790012017D /* PushButtonDraw.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		B60B86451C3424310012017D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B60B86141C3406240012017D /* AppDelegate.swift */,
+				B60B861B1C3406240012017D /* Assets.xcassets */,
+				B60B861D1C3406240012017D /* LaunchScreen.storyboard */,
+				B60B86201C3406240012017D /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		B60B86461C3424480012017D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B60B862C1C3406790012017D /* AppDelegate.swift */,
+				B60B86301C3406790012017D /* Assets.xcassets */,
+				B60B86351C3406790012017D /* Info.plist */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
