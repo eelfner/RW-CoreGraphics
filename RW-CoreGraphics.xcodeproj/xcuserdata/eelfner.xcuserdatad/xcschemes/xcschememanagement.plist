@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RW-CoreGraphicsMac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>B60B86101C3406240012017D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B60B86291C3406790012017D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

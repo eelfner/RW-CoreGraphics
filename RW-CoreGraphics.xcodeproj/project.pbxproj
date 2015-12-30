@@ -12,6 +12,16 @@
 		B60B861A1C3406240012017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60B86181C3406240012017D /* Main.storyboard */; };
 		B60B861C1C3406240012017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60B861B1C3406240012017D /* Assets.xcassets */; };
 		B60B861F1C3406240012017D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60B861D1C3406240012017D /* LaunchScreen.storyboard */; };
+		B60B862D1C3406790012017D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B862C1C3406790012017D /* AppDelegate.swift */; };
+		B60B862F1C3406790012017D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B862E1C3406790012017D /* ViewController.swift */; };
+		B60B86311C3406790012017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60B86301C3406790012017D /* Assets.xcassets */; };
+		B60B86341C3406790012017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60B86321C3406790012017D /* Main.storyboard */; };
+		B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86391C3406DD0012017D /* PushButtonView.swift */; };
+		B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863B1C3412150012017D /* PushButtonNSView.swift */; };
+		B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
+		B60B86421C3418790012017D /* PushButtonDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* PushButtonDraw.swift */; };
+		B60B86431C3418840012017D /* PushButtonDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* PushButtonDraw.swift */; };
+		B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +32,27 @@
 		B60B861B1C3406240012017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B60B861E1C3406240012017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B60B86201C3406240012017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60B862A1C3406790012017D /* RW-CoreGraphicsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RW-CoreGraphicsMac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60B862C1C3406790012017D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B60B862E1C3406790012017D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B60B86301C3406790012017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B60B86331C3406790012017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B60B86351C3406790012017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60B86391C3406DD0012017D /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
+		B60B863B1C3412150012017D /* PushButtonNSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonNSView.swift; sourceTree = "<group>"; };
+		B60B863F1C3415460012017D /* TypeAliasShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliasShared.swift; sourceTree = "<group>"; };
+		B60B86411C3418790012017D /* PushButtonDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonDraw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B60B860E1C3406240012017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60B86271C3406790012017D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				B60B86131C3406240012017D /* RW-CoreGraphics */,
+				B60B862B1C3406790012017D /* RW-CoreGraphicsMac */,
+				B60B863E1C3415080012017D /* Shared */,
+				B60B863D1C3414F10012017D /* SharedCore */,
 				B60B86121C3406240012017D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B60B86111C3406240012017D /* RW-CoreGraphics.app */,
+				B60B862A1C3406790012017D /* RW-CoreGraphicsMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +91,38 @@
 				B60B861B1C3406240012017D /* Assets.xcassets */,
 				B60B861D1C3406240012017D /* LaunchScreen.storyboard */,
 				B60B86201C3406240012017D /* Info.plist */,
+				B60B86391C3406DD0012017D /* PushButtonView.swift */,
 			);
 			path = "RW-CoreGraphics";
+			sourceTree = "<group>";
+		};
+		B60B862B1C3406790012017D /* RW-CoreGraphicsMac */ = {
+			isa = PBXGroup;
+			children = (
+				B60B862C1C3406790012017D /* AppDelegate.swift */,
+				B60B862E1C3406790012017D /* ViewController.swift */,
+				B60B86301C3406790012017D /* Assets.xcassets */,
+				B60B86321C3406790012017D /* Main.storyboard */,
+				B60B86351C3406790012017D /* Info.plist */,
+				B60B863B1C3412150012017D /* PushButtonNSView.swift */,
+			);
+			path = "RW-CoreGraphicsMac";
+			sourceTree = "<group>";
+		};
+		B60B863D1C3414F10012017D /* SharedCore */ = {
+			isa = PBXGroup;
+			children = (
+				B60B863F1C3415460012017D /* TypeAliasShared.swift */,
+			);
+			path = SharedCore;
+			sourceTree = "<group>";
+		};
+		B60B863E1C3415080012017D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B60B86411C3418790012017D /* PushButtonDraw.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +145,23 @@
 			productReference = B60B86111C3406240012017D /* RW-CoreGraphics.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B60B86291C3406790012017D /* RW-CoreGraphicsMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60B86361C3406790012017D /* Build configuration list for PBXNativeTarget "RW-CoreGraphicsMac" */;
+			buildPhases = (
+				B60B86261C3406790012017D /* Sources */,
+				B60B86271C3406790012017D /* Frameworks */,
+				B60B86281C3406790012017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RW-CoreGraphicsMac";
+			productName = "RW-CoreGraphicsMac";
+			productReference = B60B862A1C3406790012017D /* RW-CoreGraphicsMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +173,9 @@
 				ORGANIZATIONNAME = "Eric Elfner";
 				TargetAttributes = {
 					B60B86101C3406240012017D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					B60B86291C3406790012017D = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -113,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				B60B86101C3406240012017D /* RW-CoreGraphics */,
+				B60B86291C3406790012017D /* RW-CoreGraphicsMac */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +210,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B60B86281C3406790012017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60B86311C3406790012017D /* Assets.xcassets in Resources */,
+				B60B86341C3406790012017D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -136,7 +227,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60B86171C3406240012017D /* ViewController.swift in Sources */,
+				B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */,
+				B60B86431C3418840012017D /* PushButtonDraw.swift in Sources */,
+				B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */,
 				B60B86151C3406240012017D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60B86261C3406790012017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */,
+				B60B86421C3418790012017D /* PushButtonDraw.swift in Sources */,
+				B60B862F1C3406790012017D /* ViewController.swift in Sources */,
+				B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */,
+				B60B862D1C3406790012017D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +263,14 @@
 				B60B861E1C3406240012017D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B60B86321C3406790012017D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60B86331C3406790012017D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -250,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RW-CoreGraphics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zcage.RW-CoreGraphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,9 +376,40 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "RW-CoreGraphics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zcage.RW-CoreGraphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B60B86371C3406790012017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "RW-CoreGraphicsMac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zcage.RW-CoreGraphicsMac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B60B86381C3406790012017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "RW-CoreGraphicsMac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zcage.RW-CoreGraphicsMac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -284,6 +430,14 @@
 			buildConfigurations = (
 				B60B86241C3406240012017D /* Debug */,
 				B60B86251C3406240012017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B60B86361C3406790012017D /* Build configuration list for PBXNativeTarget "RW-CoreGraphicsMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60B86371C3406790012017D /* Debug */,
+				B60B86381C3406790012017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
