@@ -31,11 +31,12 @@ class SharedDraw{
         IXColor.whiteColor().setStroke()
         plusPath.stroke()
     }
-    static func drawArcInRect(rect:CGRect, withColor:IXColor) {
+    static func drawArcInRect(rect:CGRect, withColor:IXColor, forConsumption:CGFloat, outlinedColor:IXColor) {
+
         let center = CGPoint(x:rect.width/2, y:rect.height/2)
         let radius: CGFloat = min(rect.width, rect.height) / 3
         let arcWidth: CGFloat = radius / 2
-        let startAngle: CGFloat = 3 * π / 4
+        let startAngle: CGFloat =  3*π / 4
         let endAngle: CGFloat = π / 4
         
         let path = IXBezierPath()
@@ -43,5 +44,28 @@ class SharedDraw{
         withColor.setStroke()
         path.drawArcAtCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, bClockwise:true)
         path.stroke()
+
+        let angleDifference: CGFloat = 2 * π - startAngle + endAngle
+        let outlineEndAngle = angleDifference * forConsumption + startAngle
+        let outlinePath = IXBezierPath()
+        outlinePath.drawArcAtCenter(center, radius:radius + arcWidth/2.0, startAngle:startAngle, endAngle:outlineEndAngle, bClockwise:true)
+        outlinePath.drawArcAtCenter(center, radius:radius - arcWidth/2.0, startAngle:outlineEndAngle, endAngle:startAngle, bClockwise:false)
+        outlinePath.closePath()
+        outlinedColor.setStroke()
+        outlinePath.lineWidth = 2.0
+        outlinePath.stroke()
     }
+//    static func drawArcInRect(rect:CGRect, withColor:IXColor) {
+//        let center = CGPoint(x:rect.width/2, y:rect.height/2)
+//        let radius: CGFloat = min(rect.width, rect.height) / 3
+//        let arcWidth: CGFloat = radius / 2
+//        let startAngle: CGFloat = 3 * π / 4
+//        let endAngle: CGFloat = π / 4
+//        
+//        let path = IXBezierPath()
+//        path.lineWidth = arcWidth
+//        withColor.setStroke()
+//        path.drawArcAtCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, bClockwise:true)
+//        path.stroke()
+//    }
 }

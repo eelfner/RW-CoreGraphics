@@ -28,11 +28,11 @@ extension IXBezierPath {
     func drawArcAtCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, bClockwise:Bool) {
     
         #if os(iOS)
-            addArcWithCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, clockwise:true)
+            addArcWithCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, clockwise:bClockwise)
         #else
             let start = startAngle * 180.0 / π
             let end = endAngle * 180.0 / π
-            appendBezierPathWithArcWithCenter(center, radius:radius, startAngle:start, endAngle:end, clockwise:false)
+            appendBezierPathWithArcWithCenter(center, radius:radius, startAngle:start, endAngle:end, clockwise:!bClockwise)
         #endif
         
     }
