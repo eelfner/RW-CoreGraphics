@@ -23,6 +23,19 @@ import Foundation
 #endif
 // Extenstion to make Pixel Perfect lines in all devices @1x, @2x, @3x
 extension IXBezierPath {
+    
+    // create method useable by iOS (has other methods) and Mac (uses degrees)
+    func drawArcAtCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, bClockwise:Bool) {
+    
+        #if os(iOS)
+            addArcWithCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, clockwise:true)
+        #else
+            let start = startAngle * 180.0 / π
+            let end = endAngle * 180.0 / π
+            appendBezierPathWithArcWithCenter(center, radius:radius, startAngle:start, endAngle:end, clockwise:false)
+        #endif
+        
+    }
     func ppLineToX(x:CGFloat, y:CGFloat) {
         #if os(iOS)
             addLineToPoint(ppPoint(x, y))

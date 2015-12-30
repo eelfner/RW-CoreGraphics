@@ -19,9 +19,11 @@
 		B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86391C3406DD0012017D /* PushButtonView.swift */; };
 		B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863B1C3412150012017D /* PushButtonNSView.swift */; };
 		B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
-		B60B86421C3418790012017D /* PushButtonDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* PushButtonDraw.swift */; };
-		B60B86431C3418840012017D /* PushButtonDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* PushButtonDraw.swift */; };
+		B60B86421C3418790012017D /* SharedDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* SharedDraw.swift */; };
+		B60B86431C3418840012017D /* SharedDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86411C3418790012017D /* SharedDraw.swift */; };
 		B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
+		B60B86481C3424970012017D /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86471C3424970012017D /* CounterView.swift */; };
+		B60B864A1C3429FD0012017D /* CounterNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86491C3429FD0012017D /* CounterNSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		B60B86391C3406DD0012017D /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		B60B863B1C3412150012017D /* PushButtonNSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonNSView.swift; sourceTree = "<group>"; };
 		B60B863F1C3415460012017D /* TypeAliasShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAliasShared.swift; sourceTree = "<group>"; };
-		B60B86411C3418790012017D /* PushButtonDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonDraw.swift; sourceTree = "<group>"; };
+		B60B86411C3418790012017D /* SharedDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDraw.swift; sourceTree = "<group>"; };
+		B60B86471C3424970012017D /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		B60B86491C3429FD0012017D /* CounterNSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterNSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +89,10 @@
 		B60B86131C3406240012017D /* RW-CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
-				B60B86161C3406240012017D /* ViewController.swift */,
+				B60B86471C3424970012017D /* CounterView.swift */,
 				B60B86181C3406240012017D /* Main.storyboard */,
 				B60B86391C3406DD0012017D /* PushButtonView.swift */,
+				B60B86161C3406240012017D /* ViewController.swift */,
 				B60B86451C3424310012017D /* App */,
 			);
 			path = "RW-CoreGraphics";
@@ -96,6 +101,7 @@
 		B60B862B1C3406790012017D /* RW-CoreGraphicsMac */ = {
 			isa = PBXGroup;
 			children = (
+				B60B86491C3429FD0012017D /* CounterNSView.swift */,
 				B60B862E1C3406790012017D /* ViewController.swift */,
 				B60B86321C3406790012017D /* Main.storyboard */,
 				B60B863B1C3412150012017D /* PushButtonNSView.swift */,
@@ -115,7 +121,7 @@
 		B60B863E1C3415080012017D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B60B86411C3418790012017D /* PushButtonDraw.swift */,
+				B60B86411C3418790012017D /* SharedDraw.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -244,9 +250,10 @@
 			files = (
 				B60B86171C3406240012017D /* ViewController.swift in Sources */,
 				B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */,
-				B60B86431C3418840012017D /* PushButtonDraw.swift in Sources */,
+				B60B86431C3418840012017D /* SharedDraw.swift in Sources */,
 				B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */,
 				B60B86151C3406240012017D /* AppDelegate.swift in Sources */,
+				B60B86481C3424970012017D /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,9 +262,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */,
-				B60B86421C3418790012017D /* PushButtonDraw.swift in Sources */,
+				B60B86421C3418790012017D /* SharedDraw.swift in Sources */,
 				B60B862F1C3406790012017D /* ViewController.swift in Sources */,
 				B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */,
+				B60B864A1C3429FD0012017D /* CounterNSView.swift in Sources */,
 				B60B862D1C3406790012017D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
