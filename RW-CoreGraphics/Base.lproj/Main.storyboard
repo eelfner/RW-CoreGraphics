@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,6 +25,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DPi-C8-Eje" secondAttribute="height" multiplier="1:1" id="EcJ-I3-hYR"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="btnPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2C-ej-s6e"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZf-hU-fnd" customClass="PushButtonView" customModule="RW_CoreGraphics" customModuleProvider="target">
                                 <rect key="frame" x="135" y="262" width="30" height="30"/>
@@ -39,11 +41,24 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYC-au-zvQ"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-Jl-ASi" customClass="CounterView" customModule="RW_CoreGraphics" customModuleProvider="target">
                                 <rect key="frame" x="83" y="36" width="134" height="134"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSc-cv-3IJ">
+                                        <rect key="frame" x="51" y="35" width="33" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="sSc-cv-3IJ" firstAttribute="centerY" secondItem="Q6h-Jl-ASi" secondAttribute="centerY" id="1GY-lv-GDW"/>
+                                    <constraint firstItem="sSc-cv-3IJ" firstAttribute="centerX" secondItem="Q6h-Jl-ASi" secondAttribute="centerX" id="AtD-do-hIi"/>
                                     <constraint firstAttribute="width" secondItem="Q6h-Jl-ASi" secondAttribute="height" multiplier="1:1" id="HUl-h0-rRq"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="134" id="TMO-m4-csw"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="134" id="Xbx-jz-TOk"/>
@@ -67,6 +82,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="sSc-cv-3IJ" id="Y72-Oi-yRU"/>
+                        <outlet property="counterView" destination="Q6h-Jl-ASi" id="oZY-g8-Som"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

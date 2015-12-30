@@ -14,7 +14,11 @@ let NoOfGlasses = 8
 
     override var flipped:Bool { return true }
     
-    @IBInspectable var counter:Int = 5
+    @IBInspectable var counter:Int = 5 {
+        didSet {
+            needsDisplay = true
+        }
+    }
     @IBInspectable var outlineColor: NSColor = NSColor.blueColor()
     @IBInspectable var counterColor: NSColor = NSColor.orangeColor()
     

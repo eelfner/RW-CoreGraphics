@@ -9,7 +9,7 @@
 import Cocoa
 
 @IBDesignable
-class PushButtonNSView: NSView {
+class PushButtonNSView: NSButton {
     
     override var flipped:Bool { return true }
     

@@ -456,6 +456,7 @@
 				B60B86251C3406240012017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B60B86361C3406790012017D /* Build configuration list for PBXNativeTarget "RW-CoreGraphicsMac" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				B60B86381C3406790012017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Eric Elfner. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<string>MainMac</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
