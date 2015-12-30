@@ -55,17 +55,4 @@ class SharedDraw{
         outlinePath.lineWidth = 2.0
         outlinePath.stroke()
     }
-//    static func drawArcInRect(rect:CGRect, withColor:IXColor) {
-//        let center = CGPoint(x:rect.width/2, y:rect.height/2)
-//        let radius: CGFloat = min(rect.width, rect.height) / 3
-//        let arcWidth: CGFloat = radius / 2
-//        let startAngle: CGFloat = 3 * π / 4
-//        let endAngle: CGFloat = π / 4
-//        
-//        let path = IXBezierPath()
-//        path.lineWidth = arcWidth
-//        withColor.setStroke()
-//        path.drawArcAtCenter(center, radius:radius, startAngle:startAngle, endAngle:endAngle, bClockwise:true)
-//        path.stroke()
-//    }
 }

@@ -15,7 +15,7 @@
 		B60B862D1C3406790012017D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B862C1C3406790012017D /* AppDelegate.swift */; };
 		B60B862F1C3406790012017D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B862E1C3406790012017D /* ViewController.swift */; };
 		B60B86311C3406790012017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60B86301C3406790012017D /* Assets.xcassets */; };
-		B60B86341C3406790012017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60B86321C3406790012017D /* Main.storyboard */; };
+		B60B86341C3406790012017D /* MainMac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60B86321C3406790012017D /* MainMac.storyboard */; };
 		B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86391C3406DD0012017D /* PushButtonView.swift */; };
 		B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863B1C3412150012017D /* PushButtonNSView.swift */; };
 		B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
@@ -38,7 +38,7 @@
 		B60B862C1C3406790012017D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B60B862E1C3406790012017D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B60B86301C3406790012017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B60B86331C3406790012017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B60B86331C3406790012017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainMac.storyboard; sourceTree = "<group>"; };
 		B60B86351C3406790012017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60B86391C3406DD0012017D /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		B60B863B1C3412150012017D /* PushButtonNSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonNSView.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				B60B86491C3429FD0012017D /* CounterNSView.swift */,
 				B60B862E1C3406790012017D /* ViewController.swift */,
-				B60B86321C3406790012017D /* Main.storyboard */,
+				B60B86321C3406790012017D /* MainMac.storyboard */,
 				B60B863B1C3412150012017D /* PushButtonNSView.swift */,
 				B60B86461C3424480012017D /* App */,
 			);
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60B86311C3406790012017D /* Assets.xcassets in Resources */,
-				B60B86341C3406790012017D /* Main.storyboard in Resources */,
+				B60B86341C3406790012017D /* MainMac.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +289,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		B60B86321C3406790012017D /* Main.storyboard */ = {
+		B60B86321C3406790012017D /* MainMac.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B60B86331C3406790012017D /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMac.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

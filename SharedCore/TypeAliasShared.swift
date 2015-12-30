@@ -32,7 +32,8 @@ extension IXBezierPath {
         #else
             let start = startAngle * 180.0 / π
             let end = endAngle * 180.0 / π
-            appendBezierPathWithArcWithCenter(center, radius:radius, startAngle:start, endAngle:end, clockwise:!bClockwise)
+            let osxDirection = !bClockwise  // Inverted, hum!?
+            appendBezierPathWithArcWithCenter(center, radius:radius, startAngle:start, endAngle:end, clockwise:osxDirection)
         #endif
         
     }
