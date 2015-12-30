@@ -10,9 +10,9 @@ import Foundation
 import CoreGraphics
 
 class PushButtonDraw {
-    static func drawButtonInRect(rect: CGRect) {
+    static func drawButtonInRect(rect:CGRect, withFillColor:IXColor, isAdd:Bool) {
         let path = IXBezierPath(ovalInRect:rect)
-        IXColor.blueColor().setFill()
+        withFillColor.setFill()
         path.fill()
         
         let plusHeight:CGFloat = 3.0
@@ -22,9 +22,10 @@ class PushButtonDraw {
         plusPath.lineWidth = plusHeight
         plusPath.ppMoveToX(rect.width/2 - plusWidth/2, y:rect.height/2)
         plusPath.ppLineToX(rect.width/2 + plusWidth/2, y:rect.height/2)
-        plusPath.ppMoveToX(rect.width/2 + 0.5, y:rect.height/2 - plusWidth/2)
-        plusPath.ppLineToX(rect.width/2 + 0.5, y:rect.height/2 + plusWidth/2)
-        
+        if isAdd {
+            plusPath.ppMoveToX(rect.width/2 + 0.5, y:rect.height/2 - plusWidth/2)
+            plusPath.ppLineToX(rect.width/2 + 0.5, y:rect.height/2 + plusWidth/2)
+        }
         IXColor.whiteColor().setStroke()
         plusPath.stroke()
     }

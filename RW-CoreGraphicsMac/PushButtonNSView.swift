@@ -13,7 +13,10 @@ class PushButtonNSView: NSView {
     
     override var flipped:Bool { return true }
     
+    @IBInspectable var fillColor:NSColor = NSColor.greenColor()
+    @IBInspectable var isAddButton:Bool = true
+
     override func drawRect(rect: NSRect) {
-        PushButtonDraw.drawButtonInRect(rect)
+        PushButtonDraw.drawButtonInRect(rect, withFillColor:fillColor, isAdd: isAddButton)
     }
 }

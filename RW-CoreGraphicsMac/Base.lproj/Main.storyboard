@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -674,17 +675,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ai4-bL-KZr" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="173" y="68" width="135" height="135"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-bL-KZr" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                <rect key="frame" x="206" y="101" width="67" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ai4-bL-KZr" secondAttribute="height" multiplier="1:1" id="jja-se-YdI"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUs-n1-k0G" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                <rect key="frame" x="217" y="40" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OUs-n1-k0G" secondAttribute="height" multiplier="1:1" id="nie-cj-ydO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="OUs-n1-k0G" firstAttribute="top" secondItem="ai4-bL-KZr" secondAttribute="bottom" constant="16" id="8ai-Wb-14b"/>
                             <constraint firstItem="ai4-bL-KZr" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="NZc-wY-T5J"/>
-                            <constraint firstItem="ai4-bL-KZr" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="1:2" id="WVM-wv-Kxw"/>
+                            <constraint firstItem="ai4-bL-KZr" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="1:4" id="WVM-wv-Kxw"/>
+                            <constraint firstItem="OUs-n1-k0G" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gl0-jE-R7M"/>
                             <constraint firstItem="ai4-bL-KZr" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="m7T-SO-Jhh"/>
+                            <constraint firstItem="OUs-n1-k0G" firstAttribute="height" secondItem="ai4-bL-KZr" secondAttribute="height" multiplier="2:3" id="uAU-R6-2WZ"/>
                         </constraints>
                     </view>
                 </viewController>
