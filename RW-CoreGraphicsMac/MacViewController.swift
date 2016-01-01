@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MacViewController: NSViewController {
     
     @IBOutlet weak var counterNSView: CounterNSView!
     @IBOutlet weak var tField: NSTextField!
@@ -42,6 +42,9 @@ class ViewController: NSViewController {
         
         counterNSView.counter = 0
         tField.stringValue = String(counterNSView.counter)
+    }
+    override func viewDidDisappear() {
+        exit(0)
     }
 }
 
