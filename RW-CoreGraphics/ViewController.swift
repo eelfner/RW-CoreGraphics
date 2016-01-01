@@ -25,6 +25,7 @@ class ViewController: UIViewController {
                 counterView.counter--
             }
         }
+        counterLabel.text = String(counterView.counter)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

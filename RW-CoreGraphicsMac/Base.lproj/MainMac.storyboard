@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -656,6 +657,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="300" height="200"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -670,30 +672,25 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="MacViewController" customModule="RW_CoreGraphicsMac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="287"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOB-tu-f7S" customClass="CounterNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="41" y="38" width="220" height="212"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jg4-Z5-8DV">
-                                        <rect key="frame" x="83" y="81" width="39" height="60"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="TRk-br-M07">
-                                            <font key="font" metaFont="system" size="50"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-Zd-vBq" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="306" y="183" width="58" height="49"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="uQV-Zd-vBq" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                <rect key="frame" x="300" y="211" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4qE-3u-q5d"/>
+                                    <constraint firstAttribute="height" constant="60" id="eLB-MG-nvr"/>
+                                </constraints>
                                 <connections>
                                     <action selector="btnPush:" target="XfG-lQ-9wD" id="R8S-PY-EYy"/>
                                 </connections>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRD-YD-r3B" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="306" y="94" width="60" height="51"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="DRD-YD-r3B" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                <rect key="frame" x="300" y="107" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="B0d-py-aiY"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZLh-OG-o4Y"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
@@ -704,7 +701,35 @@
                                     <action selector="btnPush:" target="XfG-lQ-9wD" id="87c-yh-7hi"/>
                                 </connections>
                             </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BOB-tu-f7S" customClass="CounterNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="255" height="255"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jg4-Z5-8DV">
+                                        <rect key="frame" x="108" y="98" width="39" height="60"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="TRk-br-M07">
+                                            <font key="font" metaFont="system" size="50"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerY" secondItem="BOB-tu-f7S" secondAttribute="centerY" id="VR7-XG-kyp"/>
+                                    <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerX" secondItem="BOB-tu-f7S" secondAttribute="centerX" id="gKt-qg-3tR"/>
+                                    <constraint firstAttribute="width" secondItem="BOB-tu-f7S" secondAttribute="height" multiplier="1:1" id="o6T-yu-nEp"/>
+                                </constraints>
+                            </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="100" id="3ol-Gn-qeb"/>
+                            <constraint firstAttribute="bottom" secondItem="BOB-tu-f7S" secondAttribute="bottom" constant="16" id="AIf-2N-02C"/>
+                            <constraint firstItem="BOB-tu-f7S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="CVJ-cB-6St"/>
+                            <constraint firstItem="DRD-YD-r3B" firstAttribute="top" secondItem="uQV-Zd-vBq" secondAttribute="bottom" constant="44" id="R04-VJ-7Oy"/>
+                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="top" secondItem="BOB-tu-f7S" secondAttribute="top" id="Zga-eo-c3B"/>
+                            <constraint firstItem="DRD-YD-r3B" firstAttribute="leading" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="29" id="dDW-a7-K8g"/>
+                            <constraint firstItem="BOB-tu-f7S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="f9f-r0-Qye"/>
+                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="leading" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="29" id="nXR-TJ-EDu"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="counterNSView" destination="BOB-tu-f7S" id="eqE-1b-WHf"/>

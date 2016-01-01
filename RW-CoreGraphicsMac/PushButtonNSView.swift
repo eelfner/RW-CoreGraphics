@@ -9,6 +9,7 @@
 // Helpful links
 // http://stackoverflow.com/questions/16838525/custom-nsbuttoncell-drawbezelwithframe-not-called
 // http://stackoverflow.com/questions/4533759/how-to-code-nsbutton-to-look-just-like-image
+// https://youtu.be/BGkHGDQsIik - Youtube video on Cocoa custom controls
 
 import Cocoa
 
