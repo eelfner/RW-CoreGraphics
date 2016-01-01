@@ -13,6 +13,14 @@ class MacViewController: NSViewController {
     @IBOutlet weak var counterNSView: CounterNSView!
     @IBOutlet weak var tField: NSTextField!
     
+    override func viewDidLoad() {
+        if #available(OSX 10.10, *) {
+            super.viewDidLoad()
+        }         
+        counterNSView.counter = 0
+        tField.stringValue = String(counterNSView.counter)
+    }
+
     @IBAction func btnPush(button: PushButtonNSView) {
         if button.isAddButton {
             if counterNSView.counter < 8 {
@@ -25,24 +33,7 @@ class MacViewController: NSViewController {
         }
         tField.stringValue = String(counterNSView.counter)
     }
-    @IBAction func add(sender: AnyObject) {
-        if counterNSView.counter < 8 {
-            counterNSView.counter++
-            tField.stringValue = String(counterNSView.counter)
-        }
-    }
-    @IBAction func sub(sender: AnyObject) {
-        if counterNSView.counter > 0 {
-            counterNSView.counter--
-            tField.stringValue = String(counterNSView.counter)
-        }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        counterNSView.counter = 0
-        tField.stringValue = String(counterNSView.counter)
-    }
+
     override func viewDidDisappear() {
         exit(0)
     }

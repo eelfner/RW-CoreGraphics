@@ -677,7 +677,7 @@
                                 <rect key="frame" x="41" y="38" width="220" height="212"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jg4-Z5-8DV">
-                                        <rect key="frame" x="92" y="77" width="37" height="58"/>
+                                        <rect key="frame" x="83" y="81" width="39" height="60"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="TRk-br-M07">
                                             <font key="font" metaFont="system" size="50"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -688,6 +688,9 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-Zd-vBq" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
                                 <rect key="frame" x="306" y="183" width="58" height="49"/>
+                                <connections>
+                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="R8S-PY-EYy"/>
+                                </connections>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRD-YD-r3B" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
                                 <rect key="frame" x="306" y="94" width="60" height="51"/>
@@ -697,27 +700,10 @@
                                         <color key="value" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="87c-yh-7hi"/>
+                                </connections>
                             </customView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-nm-04N">
-                                <rect key="frame" x="394" y="211" width="65" height="32"/>
-                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tjd-TH-71z">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="add:" target="XfG-lQ-9wD" id="hfK-G2-iPj"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-Ol-0xw">
-                                <rect key="frame" x="395" y="95" width="64" height="32"/>
-                                <buttonCell key="cell" type="push" title="Sub" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5oL-PG-dF5">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="sub:" target="XfG-lQ-9wD" id="6t5-S0-VAH"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
