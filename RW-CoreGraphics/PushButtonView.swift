@@ -15,6 +15,6 @@ class PushButtonView: UIButton {
     @IBInspectable var isAddButton:Bool = true
     
     override func drawRect(rect: CGRect) {
-        SharedDraw.drawButtonInRect(rect, withFillColor: fillColor, isAdd:isAddButton)
+        SharedDraw.drawPlusMinusButtonInRect(rect, withFillColor: fillColor, isAdd:isAddButton)
     }
 }

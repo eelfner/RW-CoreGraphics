@@ -21,6 +21,6 @@ let NoOfGlasses = 8
     @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
     
     override func drawRect(rect: CGRect) {
-        SharedDraw.drawArcInRect(rect, withColor:counterColor, forConsumption:CGFloat(counter) / 8.0, outlinedColor:outlineColor)
+        SharedDraw.drawConsumptionArcInRect(rect, withColor:counterColor, forConsumption:CGFloat(counter) / 8.0, outlinedColor:outlineColor)
     }
 }

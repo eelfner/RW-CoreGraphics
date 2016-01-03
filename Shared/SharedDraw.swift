@@ -12,7 +12,7 @@ import CoreGraphics
 let π:CGFloat = CGFloat(M_PI)
 
 class SharedDraw{
-    static func drawButtonInRect(rect:CGRect, withFillColor:IXColor, isAdd:Bool) {
+    static func drawPlusMinusButtonInRect(rect:CGRect, withFillColor:IXColor, isAdd:Bool) {
         let path = IXBezierPath(ovalInRect:rect)
         withFillColor.setFill()
         path.fill()
@@ -31,7 +31,7 @@ class SharedDraw{
         IXColor.whiteColor().setStroke()
         plusPath.stroke()
     }
-    static func drawArcInRect(rect:CGRect, withColor:IXColor, forConsumption:CGFloat, outlinedColor:IXColor) {
+    static func drawConsumptionArcInRect(rect:CGRect, withColor:IXColor, forConsumption:CGFloat, outlinedColor:IXColor) {
 
         let center = CGPoint(x:rect.width/2, y:rect.height/2)
         let radius: CGFloat = min(rect.width, rect.height) / 3

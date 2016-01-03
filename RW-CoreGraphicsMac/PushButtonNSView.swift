@@ -29,6 +29,6 @@ class PushButtonNSView: NSButton {
     
     override func drawRect(rect: NSRect) {
         super.drawRect(rect)
-        SharedDraw.drawButtonInRect(rect, withFillColor:fillColor, isAdd: isAddButton)
+        SharedDraw.drawPlusMinusButtonInRect(rect, withFillColor:fillColor, isAdd: isAddButton)
     }
 }
