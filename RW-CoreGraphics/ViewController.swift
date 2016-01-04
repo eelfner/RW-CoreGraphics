@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterView:CounterView!
     @IBOutlet weak var counterLabel:UILabel!
 
-    var isGraphViewVisible = false
+    var isGraphViewVisible = true
     
     @IBAction func btnPushButton(button: PushButtonView) {
         if button.isAddButton {
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         counterView.counter = 0
         counterLabel.text = String(counterView.counter)
+        if isGraphViewVisible { counterViewTap(nil) }
     }
     @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {
         if isGraphViewVisible {
