@@ -24,6 +24,7 @@
 		B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B863F1C3415460012017D /* TypeAliasShared.swift */; };
 		B60B86481C3424970012017D /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86471C3424970012017D /* CounterView.swift */; };
 		B60B864A1C3429FD0012017D /* CounterNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86491C3429FD0012017D /* CounterNSView.swift */; };
+		B6FBB4DD1C39CFAF00DE2E4A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4DC1C39CFAF00DE2E4A /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B60B86411C3418790012017D /* SharedDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDraw.swift; sourceTree = "<group>"; };
 		B60B86471C3424970012017D /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		B60B86491C3429FD0012017D /* CounterNSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterNSView.swift; sourceTree = "<group>"; };
+		B6FBB4DC1C39CFAF00DE2E4A /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				B60B86391C3406DD0012017D /* PushButtonView.swift */,
 				B60B86161C3406240012017D /* ViewController.swift */,
 				B60B86451C3424310012017D /* App */,
+				B6FBB4DC1C39CFAF00DE2E4A /* GraphView.swift */,
 			);
 			path = "RW-CoreGraphics";
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				B60B86171C3406240012017D /* ViewController.swift in Sources */,
 				B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */,
+				B6FBB4DD1C39CFAF00DE2E4A /* GraphView.swift in Sources */,
 				B60B86431C3418840012017D /* SharedDraw.swift in Sources */,
 				B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */,
 				B60B86151C3406240012017D /* AppDelegate.swift in Sources */,

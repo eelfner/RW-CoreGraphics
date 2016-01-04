@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerView:UIView!
+    @IBOutlet weak var graphView:GraphView!
     @IBOutlet weak var counterView:CounterView!
     @IBOutlet weak var counterLabel:UILabel!
-    
-    @IBOutlet weak var btnPush: PushButtonView!
+
+    var isGraphViewVisible = false
     
     @IBAction func btnPushButton(button: PushButtonView) {
         if button.isAddButton {
@@ -26,12 +28,22 @@ class ViewController: UIViewController {
             }
         }
         counterLabel.text = String(counterView.counter)
+        if isGraphViewVisible { counterViewTap(nil) }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         counterView.counter = 0
         counterLabel.text = String(counterView.counter)
+    }
+    @IBAction func counterViewTap(gesture:UITapGestureRecognizer?) {
+        if isGraphViewVisible {
+            UIView.transitionFromView(graphView, toView:counterView, duration:1.0, options:[ .TransitionFlipFromLeft, .ShowHideTransitionViews], completion:nil)
+        }
+        else {
+            UIView.transitionFromView(counterView, toView:graphView, duration:1.0, options:[ .TransitionFlipFromRight, .ShowHideTransitionViews], completion:nil)
+        }
+        isGraphViewVisible = !isGraphViewVisible
     }
 }
 
