@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -672,73 +673,142 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="MacViewController" customModule="RW_CoreGraphicsMac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="287"/>
+                        <rect key="frame" x="0.0" y="0.0" width="591" height="405"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="uQV-Zd-vBq" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="300" y="211" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="4qE-3u-q5d"/>
-                                    <constraint firstAttribute="height" constant="60" id="eLB-MG-nvr"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="R8S-PY-EYy"/>
-                                </connections>
-                            </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="DRD-YD-r3B" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="300" y="107" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="B0d-py-aiY"/>
-                                    <constraint firstAttribute="height" constant="60" id="ZLh-OG-o4Y"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="87c-yh-7hi"/>
-                                </connections>
-                            </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BOB-tu-f7S" customClass="CounterNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
-                                <rect key="frame" x="16" y="16" width="255" height="255"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Wjh-YR-F5j" userLabel="outerContainerView">
+                                <rect key="frame" x="16" y="16" width="559" height="373"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jg4-Z5-8DV">
-                                        <rect key="frame" x="108" y="98" width="39" height="60"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="TRk-br-M07">
-                                            <font key="font" metaFont="system" size="50"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="IKW-Uj-pj5" userLabel="buttonView">
+                                        <rect key="frame" x="373" y="0.0" width="186" height="373"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="uQV-Zd-vBq" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                                <rect key="frame" x="47" y="260" width="93" height="93"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uQV-Zd-vBq" secondAttribute="height" multiplier="1:1" id="jRa-ez-d4X"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="R8S-PY-EYy"/>
+                                                </connections>
+                                            </customView>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="DRD-YD-r3B" customClass="PushButtonNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                                <rect key="frame" x="47" y="137" width="93" height="93"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DRD-YD-r3B" secondAttribute="height" multiplier="1:1" id="pgj-xP-mbW"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                        <color key="value" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPush:" target="XfG-lQ-9wD" id="87c-yh-7hi"/>
+                                                </connections>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DRD-YD-r3B" firstAttribute="top" secondItem="uQV-Zd-vBq" secondAttribute="bottom" constant="30" id="2to-fP-9UT"/>
+                                            <constraint firstItem="DRD-YD-r3B" firstAttribute="width" secondItem="IKW-Uj-pj5" secondAttribute="width" multiplier="1:2" id="8mP-Ue-L9g"/>
+                                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="top" secondItem="IKW-Uj-pj5" secondAttribute="top" constant="20" id="fsr-1Q-XsG"/>
+                                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="centerX" secondItem="IKW-Uj-pj5" secondAttribute="centerX" id="jA8-no-nZH"/>
+                                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="width" secondItem="IKW-Uj-pj5" secondAttribute="width" multiplier="1:2" id="qJu-7q-rtD"/>
+                                            <constraint firstItem="DRD-YD-r3B" firstAttribute="centerX" secondItem="IKW-Uj-pj5" secondAttribute="centerX" id="vfb-nD-Ix3"/>
+                                        </constraints>
+                                    </customView>
+                                    <tabView translatesAutoresizingMaskIntoConstraints="NO" id="fci-Bi-XhV">
+                                        <rect key="frame" x="-7" y="-10" width="387" height="389"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fci-Bi-XhV" secondAttribute="height" multiplier="1:1" id="J3D-dM-0bN"/>
+                                        </constraints>
+                                        <font key="font" metaFont="system"/>
+                                        <tabViewItems>
+                                            <tabViewItem label="Consumption" identifier="1" id="H9V-LU-0pQ">
+                                                <view key="view" id="z1V-9r-FTG">
+                                                    <rect key="frame" x="10" y="33" width="367" height="343"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="BOB-tu-f7S" customClass="CounterNSView" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="367" height="343"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jg4-Z5-8DV">
+                                                                    <rect key="frame" x="164" y="142" width="39" height="60"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="8" id="TRk-br-M07">
+                                                                        <font key="font" metaFont="system" size="50"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerX" secondItem="BOB-tu-f7S" secondAttribute="centerX" id="BgI-BV-nKy"/>
+                                                                <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerY" secondItem="BOB-tu-f7S" secondAttribute="centerY" id="IOc-TO-SsX"/>
+                                                            </constraints>
+                                                        </customView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="BOB-tu-f7S" secondAttribute="trailing" id="J13-Xc-36M"/>
+                                                        <constraint firstItem="BOB-tu-f7S" firstAttribute="leading" secondItem="z1V-9r-FTG" secondAttribute="leading" id="bhL-Rm-6D9"/>
+                                                        <constraint firstItem="BOB-tu-f7S" firstAttribute="top" secondItem="z1V-9r-FTG" secondAttribute="top" id="mPt-fK-Qdt"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BOB-tu-f7S" secondAttribute="bottom" id="o7I-rq-Vgo"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                            <tabViewItem label="Graph" identifier="2" id="uIn-0r-aal">
+                                                <view key="view" id="l0p-WQ-W0q">
+                                                    <rect key="frame" x="10" y="33" width="367" height="343"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="JiZ-Th-itp" customClass="GraphViewMac" customModule="RW_CoreGraphicsMac" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="367" height="343"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                                                    <color key="value" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </customView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="JiZ-Th-itp" secondAttribute="trailing" id="0SB-xO-CBF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JiZ-Th-itp" secondAttribute="bottom" id="KfE-1B-dWN"/>
+                                                        <constraint firstItem="JiZ-Th-itp" firstAttribute="leading" secondItem="l0p-WQ-W0q" secondAttribute="leading" id="dBw-dv-RTW"/>
+                                                        <constraint firstItem="JiZ-Th-itp" firstAttribute="top" secondItem="l0p-WQ-W0q" secondAttribute="top" id="oCc-P7-vK8"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                        </tabViewItems>
+                                    </tabView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerY" secondItem="BOB-tu-f7S" secondAttribute="centerY" id="VR7-XG-kyp"/>
-                                    <constraint firstItem="Jg4-Z5-8DV" firstAttribute="centerX" secondItem="BOB-tu-f7S" secondAttribute="centerX" id="gKt-qg-3tR"/>
-                                    <constraint firstAttribute="width" secondItem="BOB-tu-f7S" secondAttribute="height" multiplier="1:1" id="o6T-yu-nEp"/>
+                                    <constraint firstAttribute="bottom" secondItem="fci-Bi-XhV" secondAttribute="bottom" id="ErZ-11-atl"/>
+                                    <constraint firstAttribute="width" secondItem="Wjh-YR-F5j" secondAttribute="height" multiplier="3:2" id="JBQ-pb-Vth"/>
+                                    <constraint firstItem="IKW-Uj-pj5" firstAttribute="top" secondItem="Wjh-YR-F5j" secondAttribute="top" id="JJa-al-asu"/>
+                                    <constraint firstAttribute="trailing" secondItem="IKW-Uj-pj5" secondAttribute="trailing" id="LDp-Rn-SB1"/>
+                                    <constraint firstItem="fci-Bi-XhV" firstAttribute="top" secondItem="Wjh-YR-F5j" secondAttribute="top" id="fUU-CF-Q1U"/>
+                                    <constraint firstItem="fci-Bi-XhV" firstAttribute="leading" secondItem="Wjh-YR-F5j" secondAttribute="leading" id="hKg-J8-Ka9"/>
+                                    <constraint firstAttribute="bottom" secondItem="IKW-Uj-pj5" secondAttribute="bottom" id="mWL-Nu-RfZ"/>
+                                    <constraint firstItem="IKW-Uj-pj5" firstAttribute="leading" secondItem="fci-Bi-XhV" secondAttribute="trailing" id="pPm-Nm-oSZ"/>
                                 </constraints>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="100" id="3ol-Gn-qeb"/>
-                            <constraint firstAttribute="bottom" secondItem="BOB-tu-f7S" secondAttribute="bottom" constant="16" id="AIf-2N-02C"/>
-                            <constraint firstItem="BOB-tu-f7S" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="CVJ-cB-6St"/>
-                            <constraint firstItem="DRD-YD-r3B" firstAttribute="top" secondItem="uQV-Zd-vBq" secondAttribute="bottom" constant="44" id="R04-VJ-7Oy"/>
-                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="top" secondItem="BOB-tu-f7S" secondAttribute="top" id="Zga-eo-c3B"/>
-                            <constraint firstItem="DRD-YD-r3B" firstAttribute="leading" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="29" id="dDW-a7-K8g"/>
-                            <constraint firstItem="BOB-tu-f7S" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="f9f-r0-Qye"/>
-                            <constraint firstItem="uQV-Zd-vBq" firstAttribute="leading" secondItem="BOB-tu-f7S" secondAttribute="trailing" constant="29" id="nXR-TJ-EDu"/>
+                            <constraint firstItem="Wjh-YR-F5j" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" priority="750" constant="16" id="13C-Eo-foR"/>
+                            <constraint firstItem="Wjh-YR-F5j" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="4T5-ya-mZA"/>
+                            <constraint firstItem="Wjh-YR-F5j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="BHE-qx-75p"/>
+                            <constraint firstItem="Wjh-YR-F5j" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="cqc-r1-322"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wjh-YR-F5j" secondAttribute="bottom" constant="16" id="f3U-LU-FGP"/>
+                            <constraint firstAttribute="bottom" secondItem="Wjh-YR-F5j" secondAttribute="bottom" priority="250" constant="16" id="y4M-S3-Tmn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterNSView" destination="BOB-tu-f7S" id="eqE-1b-WHf"/>
                         <outlet property="tField" destination="Jg4-Z5-8DV" id="sH7-Jw-Uwc"/>
+                        <outlet property="tabView" destination="fci-Bi-XhV" id="fzU-rK-t8X"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="330.5" y="759.5"/>
         </scene>
     </scenes>
 </document>

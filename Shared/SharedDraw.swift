@@ -11,7 +11,12 @@ import CoreGraphics
 
 let π:CGFloat = CGFloat(M_PI)
 
-class SharedDraw{
+class SharedDraw {
+    static func developerYellowFill(rect:CGRect) {
+        let path = IXBezierPath(rect:rect)
+        IXColor.yellowColor().setFill()
+        path.fill()
+    }
     static func drawPlusMinusButtonInRect(rect:CGRect, withFillColor:IXColor, isAdd:Bool) {
         let path = IXBezierPath(ovalInRect:rect)
         withFillColor.setFill()

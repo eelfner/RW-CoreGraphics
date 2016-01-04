@@ -12,6 +12,7 @@ class MacViewController: NSViewController {
     
     @IBOutlet weak var counterNSView: CounterNSView!
     @IBOutlet weak var tField: NSTextField!
+    @IBOutlet weak var tabView: NSTabView!
     
     override func viewDidLoad() {
         if #available(OSX 10.10, *) {
@@ -32,6 +33,7 @@ class MacViewController: NSViewController {
             }
         }
         tField.stringValue = String(counterNSView.counter)
+        tabView.selectTabViewItemAtIndex(0)
     }
 
     override func viewDidDisappear() {
