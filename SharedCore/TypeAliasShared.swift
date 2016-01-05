@@ -13,14 +13,40 @@ import Foundation
     public typealias IXImage = UIImage
     public typealias IXColor = UIColor
     public typealias IXBezierPath  = UIBezierPath
+    public typealias IXFont  = UIFont
+    
+    func graphicsContext() -> CGContext {
+        return UIGraphicsGetCurrentContext()!
+    }
 
 #elseif os(OSX)
     import AppKit
     public typealias IXImage = NSImage
     public typealias IXColor = NSColor
     public typealias IXBezierPath  = NSBezierPath
+    public typealias IXFont  = NSFont
     
+    // From https://www.bignerdranch.com/blog/core-graphics-part-2-contextually-speaking/
+    func graphicsContext() -> CGContext {
+        let unsafeContextPointer = NSGraphicsContext.currentContext()?.graphicsPort
+        
+        if let contextPointer = unsafeContextPointer {
+            let opaquePointer = COpaquePointer(contextPointer)
+            let context: CGContextRef = Unmanaged.fromOpaque(opaquePointer).takeUnretainedValue()
+            return context
+        } else {
+            fatalError("Graphics Context not found") // Or could force error handling...
+        }
+    }
 #endif
+
+func runInIsolatedGraphicContext(drawStuff: () -> ()) {
+    let context = graphicsContext()
+    CGContextSaveGState(context)
+    drawStuff()
+    CGContextRestoreGState(context)
+}
+
 // Extenstion to make Pixel Perfect lines in all devices @1x, @2x, @3x
 extension IXBezierPath {
     
@@ -52,4 +78,11 @@ extension IXBezierPath {
         let ppY = round(y) + 0.5
         return CGPoint(x:ppX, y:ppY)
     }
+    #if os(OSX)
+        // Match iOS method (iOS has additional).
+        convenience init(roundedRect:CGRect, cornerRadius:CGFloat) {
+            self.init(roundedRect:roundedRect, xRadius:cornerRadius, yRadius:cornerRadius)
+        }
+    #else
+    #endif
 }

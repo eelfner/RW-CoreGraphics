@@ -26,6 +26,10 @@
 		B60B864A1C3429FD0012017D /* CounterNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B86491C3429FD0012017D /* CounterNSView.swift */; };
 		B6FBB4DD1C39CFAF00DE2E4A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4DC1C39CFAF00DE2E4A /* GraphView.swift */; };
 		B6FBB4DF1C3AD05B00DE2E4A /* GraphViewMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4DE1C3AD05B00DE2E4A /* GraphViewMac.swift */; };
+		B6FBB4E31C3AF4A300DE2E4A /* GraphDrawMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4E21C3AF4A300DE2E4A /* GraphDrawMgr.swift */; };
+		B6FBB4E41C3B15E600DE2E4A /* GraphDrawMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4E21C3AF4A300DE2E4A /* GraphDrawMgr.swift */; };
+		B6FBB4E61C3C146500DE2E4A /* IXStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4E51C3C146500DE2E4A /* IXStyle.swift */; };
+		B6FBB4E71C3C14FC00DE2E4A /* IXStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FBB4E51C3C146500DE2E4A /* IXStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,8 @@
 		B6FBB4DC1C39CFAF00DE2E4A /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		B6FBB4DE1C3AD05B00DE2E4A /* GraphViewMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewMac.swift; sourceTree = "<group>"; };
 		B6FBB4E01C3AD62000DE2E4A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B6FBB4E21C3AF4A300DE2E4A /* GraphDrawMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDrawMgr.swift; sourceTree = "<group>"; };
+		B6FBB4E51C3C146500DE2E4A /* IXStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IXStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B60B863F1C3415460012017D /* TypeAliasShared.swift */,
+				B6FBB4E51C3C146500DE2E4A /* IXStyle.swift */,
 			);
 			path = SharedCore;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B60B86411C3418790012017D /* SharedDraw.swift */,
+				B6FBB4E21C3AF4A300DE2E4A /* GraphDrawMgr.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -259,8 +267,10 @@
 				B60B86171C3406240012017D /* ViewController.swift in Sources */,
 				B60B86441C3419C00012017D /* TypeAliasShared.swift in Sources */,
 				B6FBB4DD1C39CFAF00DE2E4A /* GraphView.swift in Sources */,
+				B6FBB4E41C3B15E600DE2E4A /* GraphDrawMgr.swift in Sources */,
 				B60B86431C3418840012017D /* SharedDraw.swift in Sources */,
 				B60B863A1C3406DD0012017D /* PushButtonView.swift in Sources */,
+				B6FBB4E71C3C14FC00DE2E4A /* IXStyle.swift in Sources */,
 				B60B86151C3406240012017D /* AppDelegate.swift in Sources */,
 				B60B86481C3424970012017D /* CounterView.swift in Sources */,
 			);
@@ -272,9 +282,11 @@
 			files = (
 				B60B86401C3415460012017D /* TypeAliasShared.swift in Sources */,
 				B60B86421C3418790012017D /* SharedDraw.swift in Sources */,
+				B6FBB4E31C3AF4A300DE2E4A /* GraphDrawMgr.swift in Sources */,
 				B60B862F1C3406790012017D /* MacViewController.swift in Sources */,
 				B60B863C1C3412150012017D /* PushButtonNSView.swift in Sources */,
 				B60B864A1C3429FD0012017D /* CounterNSView.swift in Sources */,
+				B6FBB4E61C3C146500DE2E4A /* IXStyle.swift in Sources */,
 				B6FBB4DF1C3AD05B00DE2E4A /* GraphViewMac.swift in Sources */,
 				B60B862D1C3406790012017D /* AppDelegate.swift in Sources */,
 			);
