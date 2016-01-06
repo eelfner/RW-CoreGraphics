@@ -9,6 +9,10 @@ Original tutorial is [Core Graphics: Part 1](http://www.raywenderlich.com/90690/
 - Written in Swift 2 with xCode 7
 - Motivated by my outside work on a shared iOS/OS X App.
 
+## Example
+
+[![Image](./readme1.png)]
+
 ## Discussion
 
 Previous investigations into sharing code between iOS and OS X apps has led me to beleive that there is not a clear delineation on what you should try to share and not share. On one attempt, I went all the way to shared View Controller logic. This did not work out so well. I'm hopeful that most non-UI logic can be shared, so the question really becomes, "What UI code can be shared?"
