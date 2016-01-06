@@ -1,14 +1,19 @@
 ![OS X and iOS examples](./readme1.png)
 ## Core Graphics Exploration in iOS and OS X
-The code in this repo represents work done following the excellent RayW tutorial on Core Graphics, but has the twist of implementing for both iOS and OS X, with all the drawing code shared.
+The code in this repo represents work done following the excellent [Ray Wenderlich](http://www.raywenderlich.com) tutorial on Core Graphics, but has the twist of implementing for both iOS and OS X, with all the drawing code shared.
 
-Original tutorial is [Core Graphics: Part 1](http://www.raywenderlich.com/90690/modern-core-graphics-with-swift-part-1)
+Original tutorials by [Caroline Begbie](http://www.raywenderlich.com/u/caroline) are
+* [Core Graphics Tutorial Part 1: Getting Started](http://www.raywenderlich.com/90690/modern-core-graphics-with-swift-part-1) and, 
+* [Core Graphics Tutorial Part 2: Gradients and Contexts](http://www.raywenderlich.com/90693/modern-core-graphics-with-swift-part-2) and also,
+* [Core Graphics Tutorial Part 3: Patterns and Playgrounds](http://www.raywenderlich.com/90695/modern-core-graphics-with-swift-part-3) not used here but also is excellent!
 
 ### General Notes
+
 - Written in Swift 2 with xCode 7
 - Motivated by my outside work on a shared iOS/OS X App.
 
 ### Discussion
+
 Previous investigations into sharing code between iOS and OS X apps has led me to beleive that there is not a clear delineation on what you should try to share and not share. On one attempt, I went all the way to shared View Controller logic. This did not work out so well. I'm hopeful that most non-UI logic can be shared, so the question really becomes, "What UI code can be shared?"
 
 This project examines having share drawing code. This project contains 2 targets, one for iOS and one for OS X. For the shared UI code, 2 project groups have been created:
@@ -53,7 +58,7 @@ class SharedDraw {
 
 Also, this project builds on the tutorial by improving the code organization and the use of AutoLayout.
 
-### Conclusion
+## Conclusion
 
-I have mixed feelings about how this turned out. On one hand, I was able to achieve the goals of sharing the drawing code. On the other hand, iOS and OS X are still very different even in their handling of core library wrappers like for CoreGraphics. I wish it was cleaner. Share your thoughts with me [Eric Elfner].(mailto:eric.elfner@zcage.com).
+I have mixed feelings about how this turned out. On one hand, I was able to achieve the goals of sharing the drawing code. On the other hand, iOS and OS X are still very different even in their handling of core library wrappers like for CoreGraphics. I wish it was cleaner. Share your thoughts with me [Eric Elfner](mailto:eric.elfner@zcage.com).
 
