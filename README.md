@@ -11,7 +11,7 @@ Original tutorial is [Core Graphics: Part 1](http://www.raywenderlich.com/90690/
 
 ## Example
 
-[![Image](./readme1.png)]
+![OS X and iOS examples](./readme1.png)
 
 ## Discussion
 
